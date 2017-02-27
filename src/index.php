@@ -9,9 +9,12 @@ spl_autoload_register(function ($class_name) {
 $input;
 
 if(php_sapi_name() === 'cli') {
-    $handle = fopen ("php://stdin","r");
-    $line = fgets($handle);
-    $input = trim($line);
+    if($argc > 0 && !empty($argv[1])){
+        $input = $argv[1];
+    } else {
+        echo "Unknown parameters. Use: php index.php [word]";
+        die();
+    }
 }else {
     $input = filter_input(INPUT_POST, "words", FILTER_SANITIZE_STRING);
     if(empty($input)){
