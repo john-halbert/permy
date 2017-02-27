@@ -72,7 +72,7 @@ input[type="text"] {
     border-right:2px solid #f2f2f2;
 }
 
-input[type="text"]:not([type="submit"]):focus, input[type="text"]:not([disabled="disabled"]):hover, input[type="submit"]:focus, input[type="submit"]:hover, button:focus, button:hover{
+input[type="text"]:not([type="submit"]):focus, input[type="text"]:not([disabled="disabled"]):hover, input[type="submit"]:focus, input[type="submit"]:hover, button:hover{
    box-shadow: -4px 6px 5px 0px rgba(0,0,0,0.2);
 }
 input[type="submit"], button{
