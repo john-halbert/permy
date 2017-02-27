@@ -34,5 +34,5 @@ For example:
 
 ## Tests
  - Install [PHPUnit](https://phpunit.de/)
- -  ```phpunit --bootstrap src/index.php tests/PermuteTest.php```
+ -  ```phpunit --bootstrap src/PermuteTest.class.php tests/PermuteTest.php```
 
