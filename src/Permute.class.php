@@ -12,11 +12,6 @@ class Permute {
 
     private function parseInputs($inputs) {
         return str_split($inputs);
-        // $split;
-        // foreach($inputs as $input){
-        //     $split = str_split($input);
-        // }
-        // return $split;
     }
     
     private function sort ($inputs) {
