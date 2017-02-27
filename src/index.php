@@ -1,29 +1,17 @@
 <?php 
 
-
-
 spl_autoload_register(function ($class_name) {
     include $class_name . '.class.php';
-}); //won't work with CLI
+}); 
 
-$input;
+$input = filter_input(INPUT_POST, "words", FILTER_SANITIZE_STRING);
 
-if(php_sapi_name() === 'cli') {
-    if($argc > 0 && !empty($argv[1])){
-        $input = $argv[1];
-    } else {
-        echo "Unknown parameters. Use: php index.php [word]";
-        die();
-    }
-}else {
-    $input = filter_input(INPUT_POST, "words", FILTER_SANITIZE_STRING);
-    if(empty($input)){
-        http_response_code(400);
-        die();
-    }
+if(empty($input)){
+    http_response_code(400);
+    die();
 }
 
-if(strlen($input) >=6 ){ //don't slam my hosts' memory
+if(strlen($input) >=6 ){ //don't slam hosts' memory
     http_response_code(413);
     die();
 }
@@ -36,18 +24,10 @@ try {
     die();
 }
 
-if(empty($perms)){ //handle web responses
-    if(php_sapi_name() === 'cli') {
-        echo "Something went wrong, try again.";
-        http_response_code(500);
-        die();
-    }
-} else {
-    if(php_sapi_name() === 'cli') {
-        echo implode(", ", $perms);
-    }else {
-        echo json_encode($perms);
-    }
-}
+if(empty($perms)){ 
+    http_response_code(500);
+    die();
+} 
+echo json_encode($perms);
 
 ?>
