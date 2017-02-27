@@ -25,7 +25,7 @@ For example:
 
 
 ## Running from CLI
- - ```php src/cli.php dictionary.txt```
+ - ```php src/index-cli.php dictionary.txt```
 
 ## Running from Web
  - Place files in web root
