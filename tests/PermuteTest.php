@@ -31,4 +31,28 @@ use PHPUnit\Framework\TestCase;
          );
          return;
      }
+     public function testFourLetters() {
+         $permutator = new Permute('asdf');
+         $this->assertEquals(
+            ["adfs", "adsf", "afds", "afsd", "asdf", "asfd", "dafs", "dasf", "dfas", "dfsa", "dsaf", "dsfa", "fads", "fasd", "fdas", "fdsa", "fsad", "fsda", "sadf", "safd", "sdaf", "sdfa", "sfad", "sfda"],
+            $permutator->getPermutations()
+         );
+         return;
+     }
+     public function testFourNumbers() {
+         $permutator = new Permute('1111');
+         $this->assertEquals(
+            [1111],
+            $permutator->getPermutations()
+         );
+         return;
+     }
+     public function testTwoNumbers() {
+         $permutator = new Permute('11');
+         $this->assertEquals(
+            [11],
+            $permutator->getPermutations()
+         );
+         return;
+     }
  }

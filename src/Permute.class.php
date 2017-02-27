@@ -27,7 +27,7 @@ class Permute {
         if (empty($words)){
             array_push($permutationArray, $permutations);
         }
-        for ($i = 0; $i <= count($words) - 1; $i++) {
+        for ($i = 0; $i < count($words); $i++) {
             array_push($permutations, $words[$i]);
             $wordsArray = $words;
             array_splice($wordsArray, $i, 1);
@@ -38,7 +38,7 @@ class Permute {
     } //inspired from http://stackoverflow.com/a/25229869
 
     public function getPermutations () {
-        return $this->permutations;
+        return array_unique($this->permutations);
     }
 }
 
