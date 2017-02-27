@@ -26,7 +26,6 @@ class Permute {
     private function permutate(array $words, array $permutations = [], array &$permutationArray = []) {
         if (empty($words)){
             array_push($permutationArray, $permutations);
-            return;
         }
         for ($i = 0; $i <= count($words) - 1; $i++) {
             array_push($permutations, $words[$i]);

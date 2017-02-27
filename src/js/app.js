@@ -25,9 +25,10 @@ function sendPermRequest (input) {
             });
             $('.output').html("<span class='caret'>></span>" + permutations.join(", "))
         },
-        error : function(data){
-            $('.output').html('There was a problem. Please try again.');
-        }
+        error : function(error){
+            $('.output').html('There was a problem. Please try again. <br><br> <span class="error">More information: <br>' + error.status + " : " + error.statusText + "</span>");
+        },
+        
     })
 }
 

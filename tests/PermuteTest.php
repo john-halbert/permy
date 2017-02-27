@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
  */
  final class PermuteTest extends TestCase {
      public function testHat() {
-         $permutator = new Permute(['hat']);
+         $permutator = new Permute('hat');
          $this->assertEquals(
             ["aht","ath","hat","hta","tah","tha"],
             $permutator->getPermutations()
@@ -16,7 +16,7 @@ use PHPUnit\Framework\TestCase;
          return;
      }
      public function testAbc() {
-         $permutator = new Permute(['abc']);
+         $permutator = new Permute('abc');
          $this->assertEquals(
             ["abc","acb","bac","bca","cab","cba"],
             $permutator->getPermutations()
@@ -24,7 +24,7 @@ use PHPUnit\Framework\TestCase;
          return;
      }
      public function testZu6() {
-         $permutator = new Permute(['Zu6']);
+         $permutator = new Permute('Zu6');
          $this->assertEquals(
             ["6Zu","6uZ","Z6u","Zu6","u6Z","uZ6"],
             $permutator->getPermutations()

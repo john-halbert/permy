@@ -121,18 +121,14 @@ label {
     box-shadow:none;
     color:#32CD32;
 }
+.error {
+    color:tomato;
+}
 .caret {
     font-family:"Inconsolata", monospace;
     color:#32CD32;
-    animation: flash 530ms 10;
     display:inline-block;
     padding:0 1rem;
-
-    -webkit-animation: 1s blink step-end infinite;
-    -moz-animation: 1s blink step-end infinite;
-    -ms-animation: 1s blink step-end infinite;
-    -o-animation: 1s blink step-end infinite;
-    animation: 1s blink step-end infinite;
 }
 @media (max-width:700px){
     label, button, input, .logo, .output, .output > .caret {
