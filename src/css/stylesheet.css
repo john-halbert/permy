@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+header {
+    position:absolute;
+    top:0;
+    background-color:#f2f2f2;
+    width:100%;
+    padding:1rem 0;
+    text-align: center;
+}
+.logo {
+    font-family: 'Sansita', sans-serif;
+    font-size:3rem;
+}
+
+body {
+    background-color:#f9f9f9;
+    font-family: 'Muli', Arial, sans-serif;
+    color:rgba(0,0,0,0.8);
+}
+
+main {
+    margin-top:6rem;
+    
+}
+header, main, footer {
+    display:block; /* IE fix */ 
+}
+
+.container {
+    max-width:1280px; 
+    margin:0 auto;
+}
+
+.text-container {
+    font-size:0;
+    position: relative;
+    text-align: center;
+    width:100%;
+    max-width:75%;
+    margin:1rem auto;
+    background-color: #fff;
+    padding:2rem;
+    box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.2);
+}
+.text-container::after {
+    content:"";
+    position:absolute;
+    top:0;
+    right:0;
+    width: 0;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 40px 40px 0;
+    border-color: rgba(204, 204, 204, 0.8) rgba(0,0,0,0.8) transparent transparent;
+}
+
+input[type="text"] {
+    font-size:2rem;
+    font-family:"Muli", Arial, sans-serif;
+    border:1px solid #fff;
+    display:inline-block;
+    outline:none;
+    box-shadow: -2px 3px 2.5px 0px rgba(0,0,0,0.2); /* https://codepen.io/jamesdelaneyie/pen/MYxqRr 6*/
+    width:100%;
+    position: relative;
+    padding:1rem;
+    transition:.1s, cubic-bezier(.55,0,.1,1); 
+    border-radius:2px;
+    border-top:2px solid #f2f2f2;
+    border-right:2px solid #f2f2f2;
+}
+
+input[type="text"]:not([type="submit"]):focus, input[type="text"]:not([disabled="disabled"]):hover, input[type="submit"]:focus, input[type="submit"]:hover, button:hover{
+   box-shadow: -4px 6px 5px 0px rgba(0,0,0,0.2);
+}
+input[type="submit"], button{
+    padding:.5rem;
+    background:#f2f2f2;
+    margin-top:2rem;
+    font-weight:500;
+    font-size:2rem;
+    outline:none;
+    color:rgba(0,0,0,0.8);
+    font-family:"Muli", "Arial", sans-serif;
+    border:0;
+    width:25%;
+    min-width:10rem;
+    transition:.125s ease-in-out;
+    box-shadow: -2px 3px 2.5px 0px rgba(0,0,0,0.2); /* https://codepen.io/jamesdelaneyie/pen/MYxqRr 6*/
+}
+@media (max-width:400px){
+    button {
+        width:100%;
+    }
+}
+label {
+    font-family:"Muli", "Arial", sans-serif;
+    font-weight:300;
+    line-height:1.5;
+    font-size:3rem;
+    text-align: left;
+    display:block;
+}
+.output {
+    font-size:2rem;
+    font-family:"Inconsolata", monospace;
+    border:1px solid #fff;
+    display:inline-block;
+    outline:none;
+    text-align: left;
+    border:0;
+    min-height:5rem;
+    width:100%;
+    position: relative;
+    padding:1rem;
+    transition:.1s, cubic-bezier(.55,0,.1,1); 
+    border-radius:2px;
+    background-color:rgba(0,0,0,0.8);
+    box-shadow:none;
+    color:#32CD32;
+}
+.error {
+    color:tomato;
+}
+.caret {
+    font-family:"Inconsolata", monospace;
+    color:#32CD32;
+    display:inline-block;
+    padding:0 1rem;
+}
+@media (max-width:700px){
+    label, button, input, .logo, .output, .output > .caret {
+        font-size:2rem;
+    }
+}
