@@ -21,7 +21,7 @@ For example:
 
 `abc,acb,bac,bca,cab,cba`
 
-``6Zu,6uZ,Z6u,Zu6,u6Z,uZ6``
+`6Zu,6uZ,Z6u,Zu6,u6Z,uZ6`
 
 
 ## Running from CLI
